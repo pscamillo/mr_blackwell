@@ -4,7 +4,7 @@
 
 ## Why?
 
-[CGBN](https://github.com/NVlabs/CGBN) (CUDA Generic Big Number library by NVlabs) is the standard library for big-number arithmetic on NVIDIA GPUs. However, **CGBN is completely broken on Blackwell architecture (SM 12.0)** — kernels compile without errors but run orders of magnitude slower than expected, effectively hanging.
+[CGBN](https://github.com/NVlabs/CGBN) (CUDA Generic Big Number library by NVlabs) is the standard library for big-number arithmetic on NVIDIA GPUs. However, **CGBN has severe performance issues on Blackwell architecture (SM 12.0)** — kernels compile and launch without errors, but run orders of magnitude slower than expected, making it impractical for real workloads. The CGBN Makefile only lists architectures through sm_80 (Ampere), and as of April 2026, no official Blackwell support has been announced.
 
 This was discovered in April 2026 during integration with [sethtroisi/prime-gap](https://github.com/sethtroisi/prime-gap) for prime gap searches. No prior reports of this issue existed online.
 
@@ -24,7 +24,7 @@ Tested on RTX 5070 (SM 12.0 / Blackwell), CUDA 12.9, Linux Mint:
 | Version | Bits | LIMBS | PRP/sec | vs CPU | Notes |
 |---------|------|-------|---------|--------|-------|
 | CPU (GMP) | 683 | — | 13,700 | 1x | Ryzen 9 8800X3D |
-| CGBN (Blackwell) | 683 | — | ☠️ hangs | — | Never terminates |
+| CGBN (Blackwell) | 683 | — | impractical | — | Orders of magnitude slower |
 | v1 (binary exp) | 683 | 32 | 537,000 | 39x | Baseline native kernel |
 | v2b (correct LIMBS) | 683 | 22 | 1,033,000 | 75x | LIMBS matched to bits |
 | v2c (windowed) | 683 | 22 | 1,526,000 | 111x | 4-bit window exp |
