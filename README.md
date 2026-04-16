@@ -202,7 +202,7 @@ This avoids the 3-instruction pattern that loses carries on double overflow.
 **Paulo S. Camillo (Camillo / pscamillo)**  
 Canoinhas, Santa Catarina, Brazil
 
-Former police officer (Escrivão, Polícia Civil de Santa Catarina), self-taught CUDA developer. Also author of [PSCKangaroo](https://github.com/pscamillo/PSCKangaroo) for Bitcoin puzzle ECDLP.
+Also author of [PSCKangaroo](https://github.com/pscamillo/PSCKangaroo) for Bitcoin puzzle ECDLP.
 
 ## License
 
