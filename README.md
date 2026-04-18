@@ -214,3 +214,13 @@ Apache 2.0
 - [NVlabs/CGBN](https://github.com/NVlabs/CGBN) for the reference implementation (windowed exponentiation logic)
 - The [Prime Gap Searches](https://www.mersenneforum.org/forumdisplay.php?f=131) community at mersenneforum.org
 - Dr. Thomas Ray Nicely (1943-2019) for creating and maintaining the prime gap records
+
+## Supporting development
+
+If this project is useful to you, consider **starring the repository** — it helps visibility and signals to others that the work matters.
+
+If you want to support continued development directly:
+
+**BTC (bech32):** `bc1q0eck70y3p486ceuyggz7e68ea7pzz5sc7hwzqp`
+
+Hardware, electricity, and tooling costs are real, though partially offset by solar power. Contributions of code, benchmarks, bug reports, and documentation are also welcome — open an issue or pull request.
