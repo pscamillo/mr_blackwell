@@ -199,10 +199,9 @@ This avoids the 3-instruction pattern that loses carries on double overflow.
 
 ## Author
 
-**Paulo S. Camillo (Camillo / pscamillo)**  
-Canoinhas, Santa Catarina, Brazil
+pscamillo — independent developer working on GPU kernels for number-theoretic computation.
 
-Also author of [PSCKangaroo](https://github.com/pscamillo/PSCKangaroo) for Bitcoin puzzle ECDLP.
+Related work: PSCKangaroo.
 
 ## License
 
