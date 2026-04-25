@@ -41,7 +41,29 @@ Tested on RTX 5070 (SM 12.0 / Blackwell), CUDA 12.9, Linux Mint:
 
 ### Results
 
-Using this kernel integrated with sethtroisi/prime-gap, **5 world records** were set in prime gap searches within 24 hours of first use:
+Using this kernel integrated with sethtroisi/prime-gap, **47 world records** have been set as of April 25, 2026, all from a single RTX 5070 running the parallel sieve+GPU pipeline at P=907.
+
+#### Production results (as of 2026-04-25)
+
+- **Total records:** 47
+- **Best so far:** gap 27894, merit 31.7283 (mstart = 398,360,389)
+
+Distribution of 2026 records in the official `gaps.db` by merit band:
+
+| Merit band | Camillo records | All 2026 records |
+|------------|-----------------|------------------|
+| 24–25      | 1               | 5                |
+| 25–26      | 4               | 6                |
+| 26–27      | 9               | 14               |
+| 27–28      | 14              | 14               |
+| 28–29      | 8               | 8                |
+| 29–30      | 8               | 8                |
+| 30–31      | 2               | 2                |
+| 31–32      | 1               | 1                |
+
+#### Initial records (April 18, 2026)
+
+The first 5 records, set within 24 hours of the kernel's first use:
 
 | Gap | Merit | Previous record | Previous holder |
 |-----|-------|-----------------|-----------------|
@@ -51,7 +73,9 @@ Using this kernel integrated with sethtroisi/prime-gap, **5 world records** were
 | 23566 | 26.87 | 26.56 | Gapcoin |
 | 22858 | 26.08 | 25.15 | Loizides |
 
-Records verified and accepted at [primegaps.cloudygo.com](https://primegaps.cloudygo.com) and committed to [primegap-list-project](https://github.com/primegap-list-project/prime-gap-list).
+Records verified and accepted at [primegaps.cloudygo.com](https://primegaps.cloudygo.com) (under "Camillo") and committed to [primegap-list-project](https://github.com/primegap-list-project/prime-gap-list).
+
+Discussion thread: [Native Miller-Rabin GPU kernel for Blackwell — mersenneforum.org](https://www.mersenneforum.org/node/1111135)
 
 ## Architecture
 
