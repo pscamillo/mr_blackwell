@@ -37,7 +37,8 @@ Tested on RTX 5070 (SM 12.0 / Blackwell), CUDA 12.9, Linux Mint:
 |---------------|------------------------|----------------|
 | CPU (gap_test_simple) | 28.0s | 13,700 |
 | GPU BITS=1024 | 9.1s | 605,000 |
-| GPU BITS=704 + Mont compare | 4.5s | 1,340,000 |
+| GPU v1 (BITS=704 + Mont compare) | 4.5s | 1,340,000 |
+| **GPU v2 (constants on device)** | **3.1s** | **~1,800,000** |
 
 ### Results
 
@@ -215,6 +216,7 @@ This avoids the 3-instruction pattern that loses carries on double overflow.
 3. **PTX carry chains**: Explicit carry propagation. Gain: ~1.2x
 4. **Montgomery-space comparisons**: Eliminates from_mont in squaring loop. Gain: pipeline-dependent
 5. **Parallel sieve+GPU pipeline**: CPU sieve overlapped with GPU test. Gain: ~1.4x throughput
+6. **v2: Montgomery constants on device**: R² mod n and n0inv computed inside the kernel via repeated doubling and Newton iteration, eliminating CPU/GMP bottleneck. Instance size: 268→136 bytes (-49%), PCIe transfer: -49%. Gain: 31% pipeline speedup (measured A/B on prime-gap, 92s→70s with same workload, identical results)
 
 ### What didn't work
 
