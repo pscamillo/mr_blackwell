@@ -225,7 +225,7 @@ This avoids the 3-instruction pattern that loses carries on double overflow.
 
 pscamillo — independent developer working on GPU kernels for number-theoretic computation.
 
-Related work: PSCKangaroo.
+Related work: [PSCKangaroo](https://github.com/pscamillo/PSCKangaroo).
 
 ## License
 
