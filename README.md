@@ -225,8 +225,9 @@ This avoids the 3-instruction pattern that loses carries on double overflow.
 
 pscamillo — independent developer working on GPU kernels for number-theoretic computation.
 
-Related work: [PSCKangaroo](https://github.com/pscamillo/PSCKangaroo).
+## See also
 
+[PSCKangaroo](https://github.com/pscamillo/PSCKangaroo) — GPU-accelerated Pollard's Kangaroo for secp256k1 ECDLP.
 ## License
 
 Apache 2.0
