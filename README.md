@@ -42,25 +42,33 @@ Tested on RTX 5070 (SM 12.0 / Blackwell), CUDA 12.9, Linux Mint:
 
 ### Results
 
-Using this kernel integrated with sethtroisi/prime-gap, **47 world records** have been set as of April 25, 2026, all from a single RTX 5070 running the parallel sieve+GPU pipeline at P=907.
+Using this kernel integrated with sethtroisi/prime-gap, **60 world records** have been set as of May 5, 2026, all from a single RTX 5070 running the parallel sieve+GPU pipeline at P=907.
 
-#### Production results (as of 2026-04-25)
+#### Production results (as of 2026-05-05)
 
-- **Total records:** 47
-- **Best so far:** gap 27894, merit 31.7283 (mstart = 398,360,389)
+- **Total records:** 60
+- **Best so far:** gap 31070, merit 35.2991 (mstart = 1,129,732,039)
 
 Distribution of 2026 records in the official `gaps.db` by merit band:
 
 | Merit band | Camillo records | All 2026 records |
 |------------|-----------------|------------------|
-| 24–25      | 1               | 5                |
-| 25–26      | 4               | 6                |
-| 26–27      | 9               | 14               |
-| 27–28      | 14              | 14               |
-| 28–29      | 8               | 8                |
-| 29–30      | 8               | 8                |
-| 30–31      | 2               | 2                |
-| 31–32      | 1               | 1                |
+| 24–25      | 1               | 6                |
+| 25–26      | 5               | 7                |
+| 26–27      | 10              | 15               |
+| 27–28      | **21**          | **21**           |
+| 28–29      | **8**           | **8**            |
+| 29–30      | **9**           | **9**            |
+| 30–31      | **4**           | **4**            |
+| 31–32      | **1**           | **1**            |
+| 32–33      | 0               | 1                |
+| 33–34      | 0               | 2                |
+| 34–35      | 0               | 4                |
+| 35–36      | 1               | 5                |
+
+The kernel currently holds **100% of all 2026 records in the merit 27–32 band** (43 of 43, a contiguous five-band range), plus one record in the merit 35–36 band.
+
+The high-merit concentration appears to result from the throughput regime: ~1.3M PRP/sec sustained at 683-bit and ~230k at 1240-bit on a single RTX 5070 with the parallel sieve+GPU pipeline at P=907. This shifts the cost equation enough that high-merit candidates become reachable on consumer hardware in regions previously considered impractical.
 
 #### Initial records (April 18, 2026)
 
@@ -229,9 +237,10 @@ pscamillo — independent developer working on GPU kernels for number-theoretic 
 
 ## See also
 
-[mr_blackwell](https://github.com/pscamillo/mr_blackwell) — Native Miller-Rabin GPU kernel for Blackwell SM 12.0.
+[PSCKangaroo](https://github.com/pscamillo/PSCKangaroo) — GPU-accelerated Pollard's Kangaroo for secp256k1 ECDLP.
 
 [beal_bigint](https://github.com/pscamillo/beal_bigint) — GPU search for Beal conjecture counterexamples using the by-C^z parametrization.
+
 ## License
 
 Apache 2.0
