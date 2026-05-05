@@ -229,9 +229,9 @@ pscamillo — independent developer working on GPU kernels for number-theoretic 
 
 ## See also
 
-[PSCKangaroo](https://github.com/pscamillo/PSCKangaroo) — GPU-accelerated Pollard's Kangaroo for secp256k1 ECDLP.
-[beal_bigint](https://github.com/pscamillo/beal_bigint) — GPU search for Beal conjecture counterexamples using the by-C^z parametrization.
+[mr_blackwell](https://github.com/pscamillo/mr_blackwell) — Native Miller-Rabin GPU kernel for Blackwell SM 12.0.
 
+[beal_bigint](https://github.com/pscamillo/beal_bigint) — GPU search for Beal conjecture counterexamples using the by-C^z parametrization.
 ## License
 
 Apache 2.0
