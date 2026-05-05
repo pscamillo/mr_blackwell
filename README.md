@@ -240,7 +240,7 @@ Apache 2.0
 - [NVlabs/CGBN](https://github.com/NVlabs/CGBN) for the reference implementation (windowed exponentiation logic)
 - The [Prime Gap Searches](https://www.mersenneforum.org/forumdisplay.php?f=131) community at mersenneforum.org
 - Dr. Thomas Ray Nicely (1943-2019) for creating and maintaining the prime gap records
-- Anthropic Claude — pair-programming partner
+- Anthropic Claude — pair-programming partner 
 
 ## Supporting development
 
